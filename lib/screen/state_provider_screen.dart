@@ -58,10 +58,19 @@ class _NextScreen extends ConsumerWidget {
                 provier.toString(),
               ),
               ElevatedButton(
-                  onPressed: () {
-                    ref.read(numProvider.notifier).update((state) => state + 1);
-                  },
-                  child: const Text('UPDATE'))
+                onPressed: () {
+                  ref.read(numProvider.notifier).update((state) => state + 1);
+                },
+                child: const Text('UPDATE'),
+              ),
+              // 2번째 방법
+              // .state 를 사용해서 직접 상태값을 변경해준다
+              ElevatedButton(
+                onPressed: () {
+                  ref.read(numProvider.notifier).state = ref.read(numProvider.notifier).state - 1;
+                },
+                child: const Text('DOWN'),
+              ),
             ],
           ),
         ));

@@ -32,3 +32,8 @@ ref.read(numberProvider.notifier).update((state) => );
 - 원래 페이지 이동할 때 인자값을 넘겨줘서 똑같은 값을 공유할 수 있게 하는데 riverpod 는 똑같이 watch 만 하고 있으면 데이터를 공유할 수 있다!!!
 
 - 데이터의 근원은 하나이다 (중요)
+
+- `ref.read` 값 업데이트 방법:
+
+1. update 메서드를 이용한다
+2. .state 를 사용해서 직접 상태값을 대입해서 바꿔줄 수 있다
