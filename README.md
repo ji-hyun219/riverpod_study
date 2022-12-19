@@ -37,3 +37,16 @@ ref.read(numberProvider.notifier).update((state) => );
 
 1. update 메서드를 이용한다
 2. .state 를 사용해서 직접 상태값을 대입해서 바꿔줄 수 있다
+
+&nbsp;
+
+### 🧐 12월 19일 학습내용
+
+#### StateNotiferProvider
+
+```
+stste_notifier_provider
+class 를 사용한다
+```
+
+- state_notifier_provider.dart 에 정리해놓았음
