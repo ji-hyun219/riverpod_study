@@ -65,3 +65,7 @@ final state = ref.watch(multiplesFutureProvider);
 
 - `when`, `map` 메서드가 존재
 - `when`: `data` (로딩이 끝나서 데이터가 있을 때 실행하는 것), `error` (에러일때 실행), `loading`(로딩될 때 실행) 세가지가 다 함수이다
+
+#### StreamProvider
+
+- stream 이니까 async\*
