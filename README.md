@@ -69,3 +69,24 @@ final state = ref.watch(multiplesFutureProvider);
 #### StreamProvider
 
 - stream 이니까 async\*
+
+#### Modifier
+
+- Family Modifier, AutoDispose Modifier 가 있다
+
+#### Family Modifier
+
+- FutureProvider 와 비슷한데 family 라는 속성이 있다
+
+```dart
+final familyModifierProvider = FutureProvider.family<List<int>, int>((ref, data) async {
+  await Future.delayed(const Duration(seconds: 2));
+
+  return List.generate(5, (index) =>  index * data); // data 는 int 로 받아온다
+})
+
+// screen
+final state = ref.watch(familyModifierProvider(3)); // 3 을 넣어준다
+```
+
+- family 를 하면 FutureProvider 와 다르게 두번째 인자를 받게 된다 -> data
