@@ -90,3 +90,9 @@ final state = ref.watch(familyModifierProvider(3)); // 3 을 넣어준다
 ```
 
 - family 를 하면 FutureProvider 와 다르게 두번째 인자를 받게 된다 -> data
+
+#### AutoDispose Modifier
+
+- FutureProvider 같은 경우 해당 화면에서 뒤로 갔다가 다시 오면 로딩이 안됨, 즉 데이터 캐싱이 되어있음
+- AutoDispose Modeifier 같은 경우 해당 화면에서 뒤로 갔다가 다시 오면 로딩 됨, 데이터 캐싱이 안됨
+- 처음부터 다시 생성한다는 뜻
