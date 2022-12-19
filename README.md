@@ -50,3 +50,18 @@ class 를 사용한다
 ```
 
 - state_notifier_provider.dart 에 정리해놓았음
+
+#### FutureProvider
+
+- 여태까지 동기 작업을 하였음. 이제 비동기 작업을 한다고 가정하면 FutureProvider 를 사용
+- 근데 많이 사용하지 않는다. (이런게 있다는 것을 알아두기)
+
+```dart
+final state = ref.watch(multiplesFutureProvider);
+
+// state.when
+// state.map
+```
+
+- `when`, `map` 메서드가 존재
+- `when`: `data` (로딩이 끝나서 데이터가 있을 때 실행하는 것), `error` (에러일때 실행), `loading`(로딩될 때 실행) 세가지가 다 함수이다
