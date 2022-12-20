@@ -96,3 +96,19 @@ final state = ref.watch(familyModifierProvider(3)); // 3 을 넣어준다
 - FutureProvider 같은 경우 해당 화면에서 뒤로 갔다가 다시 오면 로딩이 안됨, 즉 데이터 캐싱이 되어있음
 - AutoDispose Modeifier 같은 경우 해당 화면에서 뒤로 갔다가 다시 오면 로딩 됨, 데이터 캐싱이 안됨
 - 처음부터 다시 생성한다는 뜻
+
+&nbsp;
+
+### 🧐 12월 20일 학습내용
+
+#### listenProvider
+
+- 변경된 값에 의해서 또 어떤 함수를 실행하고 싶을 때 `listen`
+- statefulwidget 바꾸면 ConsumerStatefulWidget
+- state 앞에 consumer 붙이기
+- buildcontext 이외에 두번째 파라미터를 받지 않음
+- `ref.listen(provider, (previous, next) {} );`
+- `previous` : 기존 상태, `next` : 변경할 상태
+- listen<int> : 여기서의 제너릭의 의미는 어떤 값을 반환할 것인지 정의
+- initialIndex 에 ref.read(listenProvider) 넣어주면 페이지를 나갔다가 들어와도 값 유지
+- 즉 `listen`: 값이 변경이 될 때마다 함수 실행
