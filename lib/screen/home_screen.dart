@@ -7,6 +7,7 @@ import 'package:riverpod_study/screen/listen_provider_screen.dart';
 import 'package:riverpod_study/screen/state_notifier_provider_screen.dart';
 import 'package:riverpod_study/screen/state_provider_screen.dart';
 
+import 'select_provider_screen.dart';
 import 'stream_provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,7 +67,14 @@ class HomeScreen extends StatelessWidget {
                     builder: (_) => const ListenProviderScreen(),
                   ));
                 },
-                child: const Text('ListenProviderScreen'))
+                child: const Text('ListenProviderScreen')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const SelectProviderScreen(),
+                  ));
+                },
+                child: const Text('SelectProviderScreen'))
           ],
         ));
   }

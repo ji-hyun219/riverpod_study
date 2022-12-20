@@ -112,3 +112,19 @@ final state = ref.watch(familyModifierProvider(3)); // 3 을 넣어준다
 - listen<int> : 여기서의 제너릭의 의미는 어떤 값을 반환할 것인지 정의
 - initialIndex 에 ref.read(listenProvider) 넣어주면 페이지를 나갔다가 들어와도 값 유지
 - 즉 `listen`: 값이 변경이 될 때마다 함수 실행
+
+#### selectProvider
+
+- name: name ?? this.name
+- name 이 null 로 오면 현재 name 으로 선언하고 null 이 아니면 그 인자로 할당해준다
+
+```dart
+state = state.copywith(
+  hasBought: !state.hasBought,
+);
+```
+
+- final state = ref.watch(selectProvider.select((value) => value.isSpicy)
+- 위는 특정 값이 바뀔때만 `watch` 하라 (빌드)
+- 여기서 value 는 selectProvider 의 상태값이다
+- ref.listen 에서도 select 를 쓰면 해당 값만 변경될 때 실행한다
