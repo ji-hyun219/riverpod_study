@@ -137,9 +137,13 @@ state = state.copywith(
 
 - watch 를 하면 최상위 프로바이더가 변경을 감지
 
+- where
+
 ```dart
 final numbers = <int>[1, 2, 3, 5, 6, 7];
 var result = numbers.where((x) => x < 5); // (1, 2, 3)
 result = numbers.where((x) => x > 5); // (6, 7)
 result = numbers.where((x) => x.isEven); // (2, 6)
 ```
+
+- shoppingList hasBought 여부 등을 관리하는 `stateNotifierProvier` 와 매움 체크하는 filterProvider (`stateProvider`) 를 상위에서 관찰한다고 생각하면 되겠다
