@@ -147,3 +147,8 @@ result = numbers.where((x) => x.isEven); // (2, 6)
 ```
 
 - shoppingList hasBought 여부 등을 관리하는 `stateNotifierProvier` 와 매움 체크하는 filterProvider (`stateProvider`) 를 상위에서 관찰한다고 생각하면 되겠다
+
+#### Provider Observer
+
+- ProviderScope 안에 observer 가 있다
+- 프로바이더들을 관찰하는 기능을 observer 안에 넣을 수 있다 (main)
