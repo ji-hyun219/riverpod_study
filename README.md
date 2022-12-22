@@ -128,3 +128,18 @@ state = state.copywith(
 - 위는 특정 값이 바뀔때만 `watch` 하라 (빌드)
 - 여기서 value 는 selectProvider 의 상태값이다
 - ref.listen 에서도 select 를 쓰면 해당 값만 변경될 때 실행한다
+
+&nbsp;
+
+### 🧐 12월 22일 학습내용
+
+#### Provider 안에 Provider 사용
+
+- watch 를 하면 최상위 프로바이더가 변경을 감지
+
+```dart
+final numbers = <int>[1, 2, 3, 5, 6, 7];
+var result = numbers.where((x) => x < 5); // (1, 2, 3)
+result = numbers.where((x) => x > 5); // (6, 7)
+result = numbers.where((x) => x.isEven); // (2, 6)
+```
